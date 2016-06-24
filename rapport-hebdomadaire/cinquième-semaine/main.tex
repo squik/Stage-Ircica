@@ -1,0 +1,64 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Cinquième rapport d'activité : lundi 9/05/2016 au lundi 16/05/2016 }
+\author{Guillaume Maitrot}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\centering
+\title{Consommation énergétique des systèmes embarqués}
+\end{center}
+
+\section{Contexte du stage}
+
+ \subsection{Le travail réalisé depuis le commencement du stage}
+ \begin{enumerate}
+\item {Prise en main de la plateforme : compilation de code C pour la carte STM32, découverte de FreeRTOS}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\item {Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash}
+\item { Programmation multi-threadée de l'ensemble sous FreeRTOS}
+\end{enumerate}
+
+ \subsection{Prochaine tâche}
+    \paragraph{Mesure de la consommation de l'application à l'aide l'Agilent
+N6705.}
+    
+\subsection{Mes tâches à accomplir}
+\begin{enumerate}
+\item {Mesure de la consommation de l'application à l'aide l'Agilent
+N6705}
+\item {Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques}
+\item {Etude des variations de la consommation selon plusieurs paramètres :
+fréquence des tâches, fréquence du processeur, fréquence des
+périphériques}
+\end{enumerate}
+
+ \subsection{Le travail réalisé pendant la semaine}
+ \begin{enumerate}
+\item {Fin de la synchronisation des tâches sous freeRTOS,débugage de la fft,installation de l'Agilent N6705, étudier les scripts de l'Agilent pour pouvoir l'utiliser.}
+\end{enumerate}
+
+\subsection{Ma semaine de stage}
+    \paragraph{J'ai commencé à demander de l'aide à Julien pour mon problème de synchronisation des tâches il m'a dit que l'utilisation de deux sémaphores étaient la méthode à utiliser et que freeRTOS avait un problème d'ordonnanceur pour xSemaphoreCreateMutex() il vaut mieux utiliser  xSemaphoreCreateBinary() pour régler mon problème de synchronisation. Après mon problème synchronisation j'ai remarqué que les données d'entrées étaient les mêmes que la sortie, j'ai regardé le code de la fft qu'on m'avait donnée, il y avait une boucle if qui empêchait l'exécution du code. Pour y remédier on m'en a donné un autre sur le site de la pierre de rosette (rosettacode.org. Après intégration de ce code et de l'affichage sur gnuplot, la fft marchait correctement. Le portage sur freeRTOS étant fini, j'ai demandé d'avoir l'Agilent pour pouvoir l'installer et commencé à tester l'Agilent avec mon code et les scripts du projet de l'année dernière.}
+    
+    \subsection{Les blocages}
+\subsubsection{En cours}
+    \paragraph{L'utilisation des scripts de l'Agilent}
+\subsubsection{À venir}
+    \paragraph{Aucun problème en vue pour l'instant.}
+	\paragraph{}
+\end{document}

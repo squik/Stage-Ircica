@@ -1,0 +1,66 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Deuxième rapport d'activité : lundi 18/04/2016 au lundi 25/04/2016 }
+\author{Guillaume Maitrot}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\centering
+\title{Consommation énergétique des systèmes embarqués}
+\end{center}
+
+\section{Contexte du stage}
+
+ \subsection{Le travail réalisé depuis le commencement du stage}
+ \begin{enumerate}
+\item {Prise en main de la plateforme : compilation de code C pour la carte STM32, découverte de FreeRTOS}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\end{enumerate}
+
+ \subsection{Prochaine tâche}
+    \paragraph{Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash.}
+    
+\subsection{Mes tâches à accomplir}
+\begin{enumerate}
+\item {Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash}
+\item { Programmation multi-threadée de l'ensemble sous FreeRTOS}
+\item {Mesure de la consommation de l'application à l'aide l'Agilent
+N6705}
+\item {Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques}
+\item {Etude des variations de la consommation selon plusieurs paramètres :
+fréquence des tâches, fréquence du processeur, fréquence des
+périphériques}
+\end{enumerate}
+
+ \subsection{Le travail réalisé pendant la semaine}
+ \begin{enumerate}
+\item {Se documenter sur l'utilisation de l'adc sur de la fft,et apprendre à convertir les valeurs de l'adc.}
+\end{enumerate}
+
+\subsection{Ma semaine de stage}
+    \paragraph{Tout le monde est revenu de vacance,j'ai réussi à résoudre tous les problèmes de compilations pour un code utilisant la dma avec la connexion entre l'adc et la fft,et coder un autre programme sans l'utilisation de la dma, pour cela j'ai eu besoin d'aide est ce que je rentre les données une par une en fenêtre glissante ou juste par block de huit valeurs.}
+    
+    \subsection{Les blocages}
+\subsubsection{En cours}
+    \paragraph{le problème d'alimentation n'est pas toujours résolu de la carte mémoire flash et comment entrer les données de l'adc dans la fft.}
+\subsubsection{À venir}
+    \paragraph{L'interaction entre adc,la FFT et la carte mémoire flash.}
+	\paragraph{}
+\end{document}

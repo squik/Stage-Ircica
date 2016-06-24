@@ -1,0 +1,64 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Septième rapport d'activité : lundi 23/05/2016 au lundi 30/05/2016 }
+\author{Guillaume Maitrot}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\centering
+\title{Consommation énergétique des systèmes embarqués}
+\end{center}
+
+\section{Contexte du stage}
+
+ \subsection{Le travail réalisé depuis le commencement du stage}
+ \begin{enumerate}
+\item {Prise en main de la plateforme : compilation de code C pour la carte STM32, découverte de FreeRTOS}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\item {Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash}
+\item { Programmation multi-threadée de l'ensemble sous FreeRTOS}
+\item {Mesure de la consommation de l'application à l'aide l'Agilent
+N6705}
+\end{enumerate}
+
+ \subsection{Prochaine tâche}
+    \paragraph{Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques.}
+    
+\subsection{Mes tâches à accomplir}
+\begin{enumerate}
+\item {Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques}
+\item {Etude des variations de la consommation selon plusieurs paramètres :
+fréquence des tâches, fréquence du processeur, fréquence des
+périphériques}
+\end{enumerate}
+
+ \subsection{Le travail réalisé pendant la semaine}
+ \begin{enumerate}
+\item {Transformation de trois codes, pour le faire fonctionner dans les scripts de nadir de l'agilent (blinky,testperso et l'application adc -> fft -> fat),écrire au propre ces codes (Readme et séparations du code de nadir avec le code précedent)}
+\end{enumerate}
+
+\subsection{Ma semaine de stage}
+    \paragraph{J'ai appris à utiliser le code de nadir dans mon code pour lancer son script en python dans l'agilent et sortir des mesures, j'ai donc effectué des mesures et j'ai montré mes résultats à Julien et Giuseppe, ils m'ont dis que ces résultats montrent qu'il y'a une préemption mais qu'elle était prévu donc les résultats sont cohérents.Maintenant je dois transformer le code de nadir pour faire trois GPIO différentes (une pour chaque tâche).}
+    
+    \subsection{Les blocages}
+\subsubsection{En cours}
+    \paragraph{Aucun problème en vue pour l'instant.}
+\subsubsection{À venir}
+    \paragraph{Aucun problème en vue pour l'instant.}
+	\paragraph{}
+\end{document}

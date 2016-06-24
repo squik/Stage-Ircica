@@ -1,0 +1,66 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Troisième rapport d'activité : lundi 25/04/2016 au lundi 2/05/2016 }
+\author{Guillaume Maitrot}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\centering
+\title{Consommation énergétique des systèmes embarqués}
+\end{center}
+
+\section{Contexte du stage}
+
+ \subsection{Le travail réalisé depuis le commencement du stage}
+ \begin{enumerate}
+\item {Prise en main de la plateforme : compilation de code C pour la carte STM32, découverte de FreeRTOS}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\end{enumerate}
+
+ \subsection{Prochaine tâche}
+    \paragraph{Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash.}
+    
+\subsection{Mes tâches à accomplir}
+\begin{enumerate}
+\item {Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash}
+\item { Programmation multi-threadée de l'ensemble sous FreeRTOS}
+\item {Mesure de la consommation de l'application à l'aide l'Agilent
+N6705}
+\item {Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques}
+\item {Etude des variations de la consommation selon plusieurs paramètres :
+fréquence des tâches, fréquence du processeur, fréquence des
+périphériques}
+\end{enumerate}
+
+ \subsection{Le travail réalisé pendant la semaine}
+ \begin{enumerate}
+\item {Mise au propre du code déjà existant,écriture de Readme pour comprendre plus facilement l'utilisation du code, comment le programmer,comment effectuer les branchements et aussi un debug mineur.Portage du code existant en baremetal en FreeRTOS.Programmation de test pour l'adc et l'écriture dans la carte flash.}
+\end{enumerate}
+
+\subsection{Ma semaine de stage}
+    \paragraph{Pendant la semaine j'ai drendu mon code propre pour qu'il soit non seulement lisible par un autre mais aussi plus compréhensible.J'ai fait quelques tests précis pour l'adc et de l'écriture dans la carte flash ainsi que les tests primaires (exemple allumage de led) et des explications fournies dans les Readme.txt associés (comment l'utiliser ,le compiler et le transformer) et ainsi pouvoir le mettre sur le git.J'ai effectué un portage de l'adc,la fft,l'écriture dans la carte flash et l'allumage des led en freeRTOS.}
+    
+    \subsection{Les blocages}
+\subsubsection{En cours}
+    \paragraph{Le portage sur FreeRTOS fonctionne mais produits des fois des résultats incoherents (le fichier s'appelle .@ et ne possede aucun droit de plus de mettre certain des autres fichier sans droit aussi et avec aucun rapport du code appliqué) .}
+\subsubsection{À venir}
+    \paragraph{Aucun problème en vue pour l'instant.}
+	\paragraph{}
+\end{document}

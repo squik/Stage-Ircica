@@ -1,0 +1,63 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{huitième rapport d'activité : lundi 30/05/2016 au lundi 6/06/2016 }
+\author{Guillaume Maitrot}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\centering
+\title{Consommation énergétique des systèmes embarqués}
+\end{center}
+
+\section{Contexte du stage}
+
+ \subsection{Le travail réalisé depuis le commencement du stage}
+ \begin{enumerate}
+\item {Prise en main de la plateforme : compilation de code C pour la carte STM32, découverte de FreeRTOS}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\item {Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash}
+\item { Programmation multi-threadée de l'ensemble sous FreeRTOS}
+\item {Mesure de la consommation de l'application à l'aide l'Agilent
+N6705}
+\end{enumerate}
+
+ \subsection{Prochaine tâche}
+    \paragraph{Ecriture du rapport de stage.}
+    
+\subsection{Mes tâches à accomplir}
+\begin{enumerate}
+\item {Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques}
+\item {Etude des variations de la consommation selon plusieurs paramètres :
+fréquence des tâches, fréquence du processeur, fréquence des
+périphériques}
+\end{enumerate}
+
+ \subsection{Le travail réalisé pendant la semaine}
+ \begin{enumerate}
+\item {Programmation de trois GPIO pour chacune des trois tâches de l'application adc->fft->fat.Mise au propre de tout le projet (indentation,readme,suppression de partie inutile) pour le mettre sur le git.}
+\end{enumerate}
+
+\subsection{Ma semaine de stage}
+    \paragraph{Tout d'abord j'ai dû faire trois fois le même schémas de la breadboard pour pouvoir utiliser les 3 GPIO(pattes d'entrées de la carte stm32), ensuite j'ai modifié mes codes pour utiliser ces 3 GPIO.Après avoir modifié mon code j'ai dû écrire un script en python pour utiliser l'agilent (un analyseur de puissance) pour pouvoir mesurer la consommation de chacune des trois tâches, ensuite j'ai eu votre visite. Et pour finir j'ai mis tout au propre de puis le depart pour pouvoir mettre mon travail sur le git.}
+    
+    \subsection{Les blocages}
+\subsubsection{En cours}
+    \paragraph{Aucun problème en vue pour l'instant.}
+\subsubsection{À venir}
+    \paragraph{Aucun problème en vue pour l'instant.}
+	\paragraph{}
+\end{document}

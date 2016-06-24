@@ -1,0 +1,67 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Premier rapport d'activité du lundi 11/04/2016 au lundi 18/04/2016 }
+\author{Guillaume Maitrot}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\centering
+\title{Consommation énergétique des systèmes embarqués}
+\end{center}
+
+\section{Contexte du stage}
+
+ \subsection{Le travail réalisé depuis le commencement du stage}
+ \begin{enumerate}
+\item {Prise en main de la plateforme : compilation de code C pour la carte STM32, découverte de FreeRTOS}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\end{enumerate}
+
+ \subsection{Prochaine tâche}
+    \paragraph{Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash.}
+    
+\subsection{Mes tâches à accomplir}
+\begin{enumerate}
+\item {Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash}
+\item { Programmation multi-threadée de l'ensemble sous FreeRTOS}
+\item {Mesure de la consommation de l'application à l'aide l'Agilent
+N6705}
+\item {Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques}
+\item {Etude des variations de la consommation selon plusieurs paramètres :
+fréquence des tâches, fréquence du processeur, fréquence des
+périphériques}
+\end{enumerate}
+
+ \subsection{Le travail réalisé pendant la semaine}
+ \begin{enumerate}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\end{enumerate}
+
+\subsection{Ma semaine de stage}
+    \paragraph{Julien étant en vacances j'ai été encadré par Thomas Vantroys qui a demandé à Nadir Cherifi de m'aider pour le problème de la carte mémoire SD (pouvoir lire et écrire dessus). Grâce à Nadir j'ai pu voir un problème que je ne savais pas,uneincompatbilité niveau du code. La bibliothèque que j'avais utilisé ne correspondais pas à ce type de carte SD. J'ai donc cherché une autre possibilité, celle de Tilen Majerle utilisant un fat me semblait être une bonne voie. Effectivement ce fut le cas, mais la carte répondait qu'après trois répétitions du lancement du même code ensuite elle le fit à chaque fois. Nadir m'a dit que c'était probablement des problèmes de transmission bruitées dû à la longueur des fils, on a essayé de résoudre ce problème, mais aussi d'essayer toutes sortes de shield pour voir les différentes possibilités.}
+    
+    \subsection{Les blocages}
+\subsubsection{En cours}
+    \paragraph{L'exécution du code (écriture ou lecture de la carte SD) ne se fait qu’après 2 ou 3 fois du lancement du code.}
+\subsubsection{À venir}
+    \paragraph{L'interaction entre adc,usart et la FFT.}
+	\paragraph{}
+\end{document}

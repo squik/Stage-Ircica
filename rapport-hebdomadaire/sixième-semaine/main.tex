@@ -1,0 +1,64 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Sixième rapport d'activité : lundi 16/05/2016 au lundi 23/05/2016 }
+\author{Guillaume Maitrot}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\centering
+\title{Consommation énergétique des systèmes embarqués}
+\end{center}
+
+\section{Contexte du stage}
+
+ \subsection{Le travail réalisé depuis le commencement du stage}
+ \begin{enumerate}
+\item {Prise en main de la plateforme : compilation de code C pour la carte STM32, découverte de FreeRTOS}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\item {Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash}
+\item { Programmation multi-threadée de l'ensemble sous FreeRTOS}
+\end{enumerate}
+
+ \subsection{Prochaine tâche}
+    \paragraph{Mesure de la consommation de l'application à l'aide l'Agilent
+N6705.}
+    
+\subsection{Mes tâches à accomplir}
+\begin{enumerate}
+\item {Mesure de la consommation de l'application à l'aide l'Agilent
+N6705}
+\item {Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques}
+\item {Etude des variations de la consommation selon plusieurs paramètres :
+fréquence des tâches, fréquence du processeur, fréquence des
+périphériques}
+\end{enumerate}
+
+ \subsection{Le travail réalisé pendant la semaine}
+ \begin{enumerate}
+\item {Vérification des résultats de l'application adc->fft->fat, apprentissage de l'Agilent N6705 et de son utilisation par ses scripts.}
+\end{enumerate}
+
+\subsection{Ma semaine de stage}
+    \paragraph{Nous avons commencé la semaine par une réunion pour acceuilir un nouveau membre Corentin Casier dans l'équipe et expliquer nos avancements dans nos travaux respectifs. Je me suis occupé de l'initialisation et de l'installation de notre projet de la carte stm32 pour Corentin. On m'a dit que le problème de visualisation des graphiques de l'Agilent était dû à un mauvais script on m'en a donné un autre, et ça marche. Enfin j'ai vu Nadir pour les scripts de mesure de consommation pour l'Agilent, avec mon aide il importe freeRTOS dans son code pour que je puisse l'utiliser, il m'a dit qu'il finirait quelques details pour ensuite m'envoyer les documents pour lundi matin.}
+    
+    \subsection{Les blocages}
+\subsubsection{En cours}
+    \paragraph{Aucun problème en vue pour l'instant.}
+\subsubsection{À venir}
+    \paragraph{Aucun problème en vue pour l'instant.}
+	\paragraph{}
+\end{document}
