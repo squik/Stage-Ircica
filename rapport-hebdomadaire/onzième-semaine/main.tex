@@ -1,0 +1,63 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{onzième rapport d'activité : lundi 20/06/2016 au lundi 27/06/2016 }
+\author{Guillaume Maitrot}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\centering
+\title{Consommation énergétique des systèmes embarqués}
+\end{center}
+
+\section{Contexte du stage}
+
+ \subsection{Le travail réalisé depuis le commencement du stage}
+ \begin{enumerate}
+\item {Prise en main de la plateforme : compilation de code C pour la carte STM32, découverte de FreeRTOS}
+\item {Programmation des périphériques de la carte : port série,
+convertisseur Analogique-Numérique, carte mémoire flash}
+\item {Développement des traitements nécessaires à l'application de
+traitement du signal : acquisition de signal via le convertisseur,
+traitement par une FFT, stockage du résultat de la FFT sur la carte
+flash}
+\item { Programmation multi-threadée de l'ensemble sous FreeRTOS}
+\item {Mesure de la consommation de l'application à l'aide l'Agilent
+N6705}
+\end{enumerate}
+
+ \subsection{Prochaine tâche}
+    \paragraph{Calcul de la préemption de l'application}
+    
+\subsection{Mes tâches à accomplir}
+\begin{enumerate}
+\item {Expérimentation sur les possibilité de variation de fréquence sur la
+STM32 concernant le processeur et les périphériques}
+\item {Etude des variations de la consommation selon plusieurs paramètres :
+fréquence des tâches, fréquence du processeur, fréquence des
+périphériques}
+\end{enumerate}
+
+ \subsection{Le travail réalisé pendant la semaine}
+ \begin{enumerate}
+\item{Création du script de calcul de moyenne de consommation des tâches, calcul du temps de la préemption par freeRTOS.}
+\end{enumerate}
+
+\subsection{Ma semaine de stage}
+    \paragraph{J'ai passé ma soutenance de stage, puis j'ai repris mon travail. Le code et la mesure de l'application étant possible, il fallait maintenant les traiter. Pour pouvoir les traiter, il faut créer un script de traitement des données. Ce script fait le lien entre la GPIO active donc la tâche, dès qu'il y a le créneau il envoie les données de consommation dans un tableau pour faire la moyenne de la tâche. Le script ne traite pas la préemption, car les résultats de l'application sont préemptés. Pour palier à ce problème, je dois demander à freeRTOS le temps de préemption des tâches pour ainsi le déduire du temps de calcul de la moyenne des tâches. }
+    
+    \subsection{Les blocages}
+\subsubsection{En cours}
+    \paragraph{Les fonctions de calcul de la préemption des tâches par freeRTOS entre en conflit avec le timer du code de la FAT et ADC}
+\subsubsection{À venir}
+    \paragraph{Aucun problème en vue pour l'instant.}
+	\paragraph{}
+\end{document}
